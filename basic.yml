@@ -1,0 +1,51 @@
+---
+# Three types of data exist
+# Ref: https://www.tutorialspoint.com/grav/grav_yaml_syntax.htm
+# Ref: https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+
+# Scalars
+
+# Boolean
+contain_key: yes
+admin_right: no
+access: True
+hack: false
+safe: TRUE
+
+string: "Call me String"
+integer: 1999
+float: 10.9999
+
+# Multiple line paragraphic
+# | newlines stay unchange, so 5 lines is 5 lines
+# > would replace newlines to spaces, so var one_liner would be one huge line.
+multiple_lines: |
+            exactly as you see
+            will appear these three
+            lines of poetry
+
+one_liner: >
+            this is really a
+            single line of text
+            despite appearances
+
+
+# Sequences
+cars:
+ - BMW
+ - Toyota
+ - Mazda
+
+
+# Dictionary 
+Sports:
+  name:  badminton
+  player: 2
+  fee: free
+  skill: none
+
+
+# A colon followed by a space is not allowed  for yml syntax. : 
+# Solution: quote it (double quote is also ok)
+# Escapes only work on double quotes but not single quotes
+...
